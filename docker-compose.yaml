@@ -1,0 +1,35 @@
+version: '3'
+services:
+  backend1:
+    build: /home/hacker/work/Docker/server/
+    ports:
+      - "8001:8000"
+    environment:
+      - MESSAGE="Welcome to my new work 1"
+  backend2:
+    build: /home/hacker/work/Docker/server/
+    ports:
+      - "8002:8000"
+    environment:
+      - MESSAGE="Welcome to my new work 2"
+  
+  backend3:
+    build: /home/hacker/work/Docker/server/
+    ports:
+      - "8003:8000"
+    environment:
+      - MESSAGE="Welcome to my new work 3"
+
+  backend4:
+    build: /home/hacker/work/Docker/server/
+    ports:
+      - "8004:8000"
+    environment:
+      - MESSAGE="Welcome to my new work 4"
+
+  backend5:
+    build: /home/hacker/work/Docker/server/
+    ports:
+      - "8005:8000"
+    environment:
+      - MESSAGE="Welcome to my new work 5"
