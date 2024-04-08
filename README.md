@@ -62,3 +62,4 @@ This project demonstrates how to set up load balancing for a sample backend appl
    sudo systemctl restart apache2
    
 ## Access your application through Apache HTTP Server load balancer.
+   http://localhost/
