@@ -35,29 +35,38 @@ This project demonstrates how to set up load balancing for a sample backend appl
    sudo apt install nginx
 
 7. Configure NGINX as a load balancer by editing the NGINX configuration file (nginx.conf). An example configuration is provided in this repository (nginx/nginx.conf).
-
-8. Restart NGINX to apply the configuration changes:
-   ```bash
-   sudo systemctl restart nginx
    
-9. Access your application through NGINX load balancer.
+9. After installing the nginx Copy the /loadbalincing_file/nginx.conf with the nginx.conf file
+    ```bash
+    sudo mv nginx.conf /etc/nginx/nginx.conf
+
+11. Restart NGINX to apply the configuration changes:
+    ```bash
+    sudo systemctl restart nginx
+
+13. Access your application through NGINX load balancer.
 
 ## Setting up Apache HTTP Server Load Balancer
 1. Install Apache HTTP Server if not already installed:
    ```bash
    sudo apt update
    sudo apt install apache2
-2. Enable required Apache modules:
+
+2. Copy the load-balancer.conf to /etc/apache2/sites-available/
+   ```bash
+   cp load-balancer.conf /etc/apache2/sites-available/
+   
+4. Enable required Apache modules:
    ```bash
    sudo a2enmod proxy proxy_balancer proxy_http
 
-3. Configure Apache HTTP Server as a load balancer by editing the Apache configuration file (load-balancer.conf). An example configuration is provided in this repository (apache/load-balancer.conf).
+5. Configure Apache HTTP Server as a load balancer by editing the Apache configuration file (load-balancer.conf). An example configuration is provided in this repository (apache/load-balancer.conf).
 
-4. Enable the Apache load balancer configuration:
+6. Enable the Apache load balancer configuration:
    ```bash
    sudo a2ensite load-balancer.conf
    
-5. Restart Apache to apply the configuration changes:
+7. Restart Apache to apply the configuration changes:
    ```bash
    sudo systemctl restart apache2
    
