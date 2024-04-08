@@ -18,7 +18,7 @@ This project demonstrates how to set up load balancing for a sample backend appl
 
 2. Navigate to the project directory:
    ```bash
-   cd your-repo
+   cd Nginx-Work
    
 3. Run the sample backend application in Docker containers:
    ```bash
